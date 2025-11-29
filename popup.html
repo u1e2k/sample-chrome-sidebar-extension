@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple ToDo Viewer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 ToDo詳細ビューア</h1>
+    
+    <!-- ローディングメッセージ -->
+    <div id="loading-message" class="message">
+      読み込み中...
+    </div>
+    
+    <!-- エラーメッセージ -->
+    <div id="error-message" class="message error">
+      データの取得に失敗しました
+    </div>
+    
+    <!-- ToDoデータ表示エリア -->
+    <div id="todo-content" class="todo-content">
+      <div class="todo-item">
+        <h2>ToDoタイトル:</h2>
+        <p id="todo-title" class="todo-title">-</p>
+      </div>
+      
+      <div class="todo-item">
+        <h2>ステータス:</h2>
+        <p id="todo-status" class="todo-status">-</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
