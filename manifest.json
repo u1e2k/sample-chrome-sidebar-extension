@@ -3,12 +3,11 @@
   "name": "Simple ToDo Viewer",
   "version": "1.0.0",
   "description": "JSONPlaceholder APIからToDoデータを取得して表示する拡張機能",
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "ToDo Viewer"
+  "side_panel": {
+    "default_path": "popup.html"
   },
   "permissions": [
-    "activeTab"
+    "sidePanel"
   ],
   "host_permissions": [
     "https://jsonplaceholder.typicode.com/*"

@@ -2,7 +2,7 @@
 
 ## 概要
 
-`https://jsonplaceholder.typicode.com/todos/1` のエンドポイントからToDoデータを取得し、整形された状態で拡張機能のポップアップに表示するChrome拡張機能です。
+`https://jsonplaceholder.typicode.com/todos/1` のエンドポイントからToDoデータを取得し、整形された状態で拡張機能のサイドバーに表示するChrome拡張機能です。
 
 外部APIへのGETリクエストと、Chrome拡張機能のUI実装のテストを目的としています。
 
@@ -33,8 +33,8 @@
 | **manifest_version** | 3 (V3形式) |
 | **name** | Simple ToDo Viewer |
 | **version** | 1.0.0 |
-| **action** | `default_popup`: "popup.html" |
-| **permissions** | `activeTab` |
+| **side_panel** | `default_path`: "popup.html" |
+| **permissions** | `sidePanel` |
 | **host_permissions** | `https://jsonplaceholder.typicode.com/*` |
 
 ### popup.html
@@ -48,7 +48,7 @@ UIの構成要素:
 ### popup.css
 
 スタイル仕様:
-- **ポップアップサイズ**: 幅360px、最小高さ280px
+- **サイドバーサイズ**: 幅100%、最小高さ100vh
 - **完了時** (`.completed`): 緑背景 + ✅アイコン
 - **未完了時** (`.uncompleted`): 赤背景 + ❌アイコン
 - レスポンシブなデザイン
@@ -111,9 +111,10 @@ delectus aut autem
 
 ## 使い方
 
-1. Chrome拡張機能としてインストール後、ツールバーの拡張機能アイコンをクリック
-2. ポップアップが開き、自動的にAPIからToDoデータを取得して表示されます
-3. 完了/未完了のステータスが色とアイコンで視覚的に表示されます
+1. Chrome拡張機能としてインストール後、ツールバーの拡張機能アイコンを右クリック
+2. 「サイドパネルを開く」を選択、またはChromeのサイドバーボタンから開く
+3. サイドバーが開き、自動的にAPIからToDoデータを取得して表示されます
+4. 完了/未完了のステータスが色とアイコンで視覚的に表示されます
 
 ## 開発情報
 
